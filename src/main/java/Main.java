@@ -12,16 +12,17 @@ public class Main {
         for (int i = 0; i < 3; i++) {
             System.out.println("Введите название машины №" + (i + 1));
             String name = scanner.next();
-           System.out.println("Введите скорость машины №" + (i + 1));
+            System.out.println("Введите скорость машины №" + (i + 1));
             int speed;
 
+            // проверяем корректность введенной скорости
             while (true) {
                 if (scanner.hasNextInt()) {
                     speed = scanner.nextInt();
                     if (speed <= 0 || speed > 250) {
                         System.out.println("Error. Please, try again");
                     } else {
-                       break;
+                        break;
                     }
                 } else {
                     System.out.println("Error. Please, try again");
